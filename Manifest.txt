@@ -1,0 +1,8 @@
+.autotest
+History.txt
+Manifest.txt
+README.txt
+Rakefile
+bin/on_fork
+lib/on_fork.rb
+test/test_on_fork.rb
