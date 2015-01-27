@@ -1,0 +1,8 @@
+.autotest
+History.txt
+Manifest.txt
+README.txt
+Rakefile
+bin/on_fork/shims
+lib/on_fork/shims.rb
+test/test_on_fork/shims.rb
