@@ -13,14 +13,23 @@ require "hoe"
 # Hoe.plugin :rcov
 # Hoe.plugin :rdoc
 
-Hoe.spec "on_fork" do
+HOE = Hoe.spec "on_fork" do
   # HEY! If you fill these out in ~/.hoe_template/default/Rakefile.erb then
   # you'll never have to touch them again!
   # (delete this comment too, of course)
+  #
+  developer "Evan Phoenix", "evan@phx.io"
 
-  # developer("FIX", "FIX@example.com")
-
-  # license "MIT" # this should match the license in the README
+  license "MIT" 
 end
+
+file "#{HOE.spec.name}.gemspec" => ['Rakefile'] do |t|
+  puts "Generating #{t.name}"
+  File.open(t.name, 'wb') { |f| f.write HOE.spec.to_ruby }
+end
+
+desc "Generate or update the standalone gemspec file for the project"
+task :gemspec => ["#{HOE.spec.name}.gemspec"]
+
 
 # vim: syntax=ruby
