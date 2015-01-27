@@ -41,12 +41,14 @@ class OnForkManager
   end
 
   def patch!
-    Kernel.instance_eval do
+    Kernel.module_eval do
       undef_method :fork
 
       def fork(*args, &blk)
         OnFork.fork(*args, &blk)
       end
+
+      module_function :fork
     end
 
     class << Process
