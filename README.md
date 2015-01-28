@@ -1,29 +1,29 @@
-= on_fork
+# on_fork
 
 http://github.com/evanphx/on_fork
 
-== DESCRIPTION:
+## DESCRIPTION:
 
 A way to manage code that should run when a process is forked
 
-== FEATURES/PROBLEMS:
+## FEATURES/PROBLEMS:
 
 * Trivial API to add code to run on fork
 * Patches Kernel/Process.fork to automatically run code
 
-== SYNOPSIS:
+## SYNOPSIS:
 
   OnFork.add { ActiveRecord::Base.connection.close }
 
-== REQUIREMENTS:
+## REQUIREMENTS:
 
 * Code that holds resources that are invalidate in forked processes
 
-== INSTALL:
+## INSTALL:
 
 * Use on_fork in your gem
 
-== DEVELOPERS:
+## DEVELOPERS:
 
 After checking out the source, run:
 
@@ -32,7 +32,7 @@ After checking out the source, run:
 This task will install any missing dependencies, run the tests/specs,
 and generate the RDoc.
 
-== LICENSE:
+## LICENSE:
 
 (The MIT License)
 
