@@ -19,8 +19,8 @@ HOE = Hoe.spec "on_fork" do
   # (delete this comment too, of course)
   #
   developer "Evan Phoenix", "evan@phx.io"
-
-  license "MIT" 
+  self.readme_file = "README.md"
+  license "MIT"
 end
 
 file "#{HOE.spec.name}.gemspec" => ['Rakefile'] do |t|
